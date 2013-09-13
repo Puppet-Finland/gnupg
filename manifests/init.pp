@@ -24,7 +24,7 @@
 class gnupg {
 
 # Rationale for this is explained in init.pp of the sshd module
-if hiera('manage_gnupg') != 'false' {
+if hiera('manage_gnupg', 'true') != 'false' {
     include gnupg::install
 }
 }
