@@ -22,5 +22,9 @@
 # See file LICENSE for details
 #
 class gnupg {
+
+# Rationale for this is explained in init.pp of the sshd module
+if hiera('manage_gnupg') != 'false' {
     include gnupg::install
+}
 }
